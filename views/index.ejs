@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinCabs - Your Trusted Ride</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Banner Section */
+        .banner {
+            position: relative;
+            background: linear-gradient(135deg, #007bff 0%, #00c4cc 100%), 
+                        url('img/index/banner.webp') no-repeat center;
+            background-blend-mode: overlay;
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .banner .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        .banner p {
+            font-size: 1.5rem;
+            animation: fadeInUp 1.8s ease-out;
+        }
+
+        .banner .btn {
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .banner .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            color: #007bff;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .banner { height: 400px; }
+            .banner h1 { font-size: 2.5rem; }
+            .banner p { font-size: 1.2rem; }
+        }
+
+        /* Booking Form */
+        .booking-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cards */
+        .card {
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Call to Action */
+        .cta {
+            background: #007bff;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .cta .btn {
+            background: white;
+            color: #007bff;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        .cta .btn:hover {
+            background: #fff;
+            color: #0056b3;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <h1>Welcome to FinCabs</h1>
+            <p>Your trusted partner for safe and affordable rides</p>
+            <a href="#booking" class="btn btn-light btn-lg mt-3">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="booking-form">
+                    <h2 class="text-center mb-4">Book Your Ride</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="pickup" class="form-label">Pickup Location</label>
+                            <input type="text" class="form-control" id="pickup" placeholder="Enter pickup location">
+                        </div>
+                        <div class="mb-3">
+                            <label for="dropoff" class="form-label">Drop-off Location</label>
+                            <input type="text" class="form-control" id="dropoff" placeholder="Enter drop-off location">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="container mt-5">
+        <h2 class="text-center mb-4">Our Packages</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/packages/city-ride.jpg" class="card-img-top" alt="City Ride">
+                    <div class="card-body">
+                        <h5 class="card-title">City Ride</h5>
+                        <p class="card-text">Affordable city rides starting at $10.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/packages/airport.jpg" class="card-img-top" alt="Airport Transfer">
+                    <div class="card-body">
+                        <h5 class="card-title">Airport Transfer</h5>
+                        <p class="card-text">Hassle-free airport rides starting at $25.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/packages/hourly.jpg" class="card-img-top" alt="Hourly Rental">
+                    <div class="card-body">
+                        <h5 class="card-title">Hourly Rental</h5>
+                        <p class="card-text">Flexible hourly rentals starting at $15/hr.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta mt-5">
+        <h2>Ready to Ride?</h2>
+        <p>Book your FinCabs ride today and experience the difference!</p>
+        <a href="#booking" class="btn btn-light btn-lg">Get Started</a>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

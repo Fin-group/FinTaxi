@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities We Serve - FinTaxi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .city-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .city-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="fw-bold">Cities We Serve</h1>
+        <p class="lead">Providing Reliable Taxi Services Across Multiple Cities</p>
+    </header>
+
+    <section class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm city-card">
+                    <div class="card-body">
+                        <i class="fas fa-city fa-3x text-primary mb-3"></i>
+                        <h4 class="fw-bold">New York</h4>
+                        <p>Fast, reliable, and comfortable rides across the Big Apple.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm city-card">
+                    <div class="card-body">
+                        <i class="fas fa-building fa-3x text-success mb-3"></i>
+                        <h4 class="fw-bold">Los Angeles</h4>
+                        <p>Explore LA hassle-free with our premium taxi services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm city-card">
+                    <div class="card-body">
+                        <i class="fas fa-landmark fa-3x text-warning mb-3"></i>
+                        <h4 class="fw-bold">Chicago</h4>
+                        <p>Experience seamless travel within the Windy City.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm city-card">
+                    <div class="card-body">
+                        <i class="fas fa-map-marker-alt fa-3x text-danger mb-3"></i>
+                        <h4 class="fw-bold">Houston</h4>
+                        <p>Reliable and budget-friendly rides in and around Houston.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm city-card">
+                    <div class="card-body">
+                        <i class="fas fa-globe-americas fa-3x text-info mb-3"></i>
+                        <h4 class="fw-bold">Miami</h4>
+                        <p>Ride through the vibrant streets of Miami with ease.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
